@@ -19,13 +19,21 @@
 // toLowerList(['heLlo','GOOD','no Thanks']) should be ['hello','good','no thanks']
 // toLowerList([]) should be []
 
+/**
+ * Return a new array of lowercased strings
+ * 
+ * @param {Array<string>} arr - the array of strings
+ * @returns {Array<string>} the lowercase versions of the strings
+ */
 function toLowerList(arr){
+    const cleanarr=[]
+
     for (let word of arr){
         console.log(word)
-        arr[arr.indexOf(word)] = arr[arr.indexOf(word)].toLowerCase()
+        cleanarr.push(arr[arr.indexOf(word)].toLowerCase())
     }
 
-    return arr
+    return cleanarr
 }
 console.log(toLowerList(["academy.tech", "GITHUB.COM", "StackOverflow.com", "mOzIlLa.OrG"]), `should be ["academy.tech", "github.com", "stackoverflow.com", "mozilla.org"]`)
 console.log(toLowerList(['heLlo','GOOD','no Thanks']), `should be ['hello','good','no thanks']`)
