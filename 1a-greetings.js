@@ -1,7 +1,7 @@
 
 function addGreetings(arr){
     const cleanarr = []
-    for (word in arr){
+    for (word of arr){
         cleanarr.push(`Hello, ${word}!`)
     }
 
